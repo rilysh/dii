@@ -76,7 +76,7 @@ func main() {
 			return
 		}
 		if res.StatusCode != 200 {
-			fmt.Println("Failed to get results, status code: " + strconv.Itoa(res.StatusCode))
+			vaprt("Failed to get results, status code: " + strconv.Itoa(res.StatusCode) + "\n")
 			return
 		}
 		body, err := ioutil.ReadAll(res.Body)
