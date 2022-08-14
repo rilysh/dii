@@ -13,22 +13,22 @@ import (
 type Response struct {
 	Data struct {
 		Geo struct {
-			Host          string `json:"host"`
-			Asn           int32  `json:"asn"`
-			Isp           string `json:"isp"`
-			Country       string `json:"country_name"`
-			CountryCode   string `json:"country_code"`
-			RegionName    string `json:"region_name"`
-			RegionCode    string `json:"region_code"`
-			City          string `json:"city"`
-			PostalCode    string `json:"postal_code"`
-			ContinentName string `json:"continent_name"`
-			ContinentCode string `json:"continent_code"`
-			Latitude      int32  `json:"latitude"`
-			Longitude     int32  `json:"longitude"`
-			MetroCode     string `json:"metro_code"`
-			Timezone      string `json:"timezone"`
-			Datetime      string `json:"datetime"`
+			Host          string  `json:"host"`
+			Asn           int32   `json:"asn"`
+			Isp           string  `json:"isp"`
+			Country       string  `json:"country_name"`
+			CountryCode   string  `json:"country_code"`
+			RegionName    string  `json:"region_name"`
+			RegionCode    string  `json:"region_code"`
+			City          string  `json:"city"`
+			PostalCode    string  `json:"postal_code"`
+			ContinentName string  `json:"continent_name"`
+			ContinentCode string  `json:"continent_code"`
+			Latitude      float32 `json:"latitude"`
+			Longitude     float32 `json:"longitude"`
+			MetroCode     string  `json:"metro_code"`
+			Timezone      string  `json:"timezone"`
+			Datetime      string  `json:"datetime"`
 		} `json:"geo"`
 	} `json:"data"`
 }
@@ -140,8 +140,8 @@ func main() {
  Postal Code: %s
  Continent Name: %s
  Continent Code: %s
- Latitude: %d
- Longitude: %d
+ Latitude: %f
+ Longitude: %f
 -------------------------
 %s
 `, color_start,
